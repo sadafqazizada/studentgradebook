@@ -24,3 +24,11 @@ def enroll_course(self, course_code):
     else:
         print("student already Enrolled in this course!")
 
+def display_info(self):
+    print("===== Student Info =====")
+    print(f"ID: {self.__student_id}")
+    print(f"Name: {self.__name}")
+    print(f"Email: {self.__email}")
+    print(f"Courses: {self.__courses}")
+
+    

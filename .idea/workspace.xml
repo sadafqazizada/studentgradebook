@@ -34,6 +34,9 @@
     &quot;accountId&quot;: &quot;91bff30b-9de8-49e1-999d-2fd113591219&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/student.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
