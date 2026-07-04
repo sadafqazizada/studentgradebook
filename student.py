@@ -12,10 +12,15 @@ def get_name(self):
 def get_email(self):
     return self.__email
 
-
 def set_email(self, email):
     if "@" in email and "." in email:
         self.__email = email
     else :
         print("invalid email format!")
+
+def enroll_course(self, course_code):
+    if course_code not in self.__courses:
+        self.__courses.append(course_code)
+    else:
+        print("student already Enrolled in this course!")
 
