@@ -4,3 +4,4 @@ class Course:
         self.__course_name = course_name
         self.__students = []
         self.__assessments = []
+
