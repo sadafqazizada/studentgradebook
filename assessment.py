@@ -9,6 +9,9 @@ class Assessment:
     def get_max_score(self):
         return self.__max_score
 
+    def calculate_percentage(self, score):
+        return (score / self.__max_score()) * 100
+
 class Quiz(Assessment):
     def display_info(self):
         print("=====Quiz Information=====")
