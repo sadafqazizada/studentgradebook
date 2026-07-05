@@ -23,3 +23,10 @@ class Course:
             if assessment.get_name() == assessment_name:
                 return assessment
         return None
+
+    def display_info(self):
+        print("=====Course Information=====")
+        print(f"Course Code: {self.__course_code}")
+        print(f"Course Name: {self.__course_name}")
+        print(f"Students Enrolled: {len(self.__students)}")
+        print(f"Assessments: {len(self.__assessments)}")
