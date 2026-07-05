@@ -31,4 +31,3 @@ def display_info(self):
     print(f"Email: {self.__email}")
     print(f"Courses: {self.__courses}")
 
-    
