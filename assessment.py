@@ -14,3 +14,9 @@ class Quiz(Assessment):
         print("=====Quiz Information=====")
         print(f"Title: {self.get_title()}")
         print(f"Max score: {self.get_max_score()}")
+
+class Exam(Assessment):
+    def display_info(self):
+        print("=====Exam Information=====")
+        print(f"Title: {self.get_title()}")
+        print(f"Max score: {self.get_max_score()}")
