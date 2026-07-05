@@ -35,9 +35,14 @@ class Quiz(Assessment):
 
 class Exam(Assessment):
     def display_info(self):
-        print("=====Exam Information=====")
-        print(f"Title: {self.get_title()}")
-        print(f"Max score: {self.get_max_score()}")
+        print(f"Exam: {self.get_title()} - Max Score: {self.get_max_score()}")
+
+    def grade_message(self, score):
+        percentage = self.calculate_percentage(score)
+        if percentage >= 55:
+            return "Passed exam"
+        else:
+            return "Failed exam"
 
 class Project(Assessment):
     def display_info(self):
