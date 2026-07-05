@@ -7,3 +7,6 @@ class Gradebook:
 
     def add_student(self, student):
         self.students[student.get_id()] = student
+
+    def add_course(self, course):
+        self.courses[course.get_course_code()] = course
