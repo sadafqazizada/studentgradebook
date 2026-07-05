@@ -19,6 +19,9 @@ class Assessment:
         else:
             return "Failed"
 
+    def display_info(self):
+        print(f"{self.__title} - max score: {self.__max_score}")
+
 class Quiz(Assessment):
     def display_info(self):
         print("=====Quiz Information=====")
