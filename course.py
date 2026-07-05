@@ -18,9 +18,9 @@ class Course:
     def add_assessment(self, assessment):
         self.__assessments.append(assessment)
 
-    def find_assessment(self, assessment_name):
+    def find_assessment(self, assessment_title):
         for assessment in self.__assessments:
-            if assessment.get_name() == assessment_name:
+            if assessment.get_title() == assessment_title:
                 return assessment
         return None
 
