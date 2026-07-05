@@ -17,3 +17,9 @@ class Course:
             print(" Student is already enrolled in this course")
     def add_assessment(self, assessment):
         self.__assessments.append(assessment)
+
+    def find_assessment(self, assessment_name):
+        for assessment in self.__assessments:
+            if assessment.get_name() == assessment_name:
+                return assessment
+        return None
