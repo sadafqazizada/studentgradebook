@@ -8,3 +8,9 @@ class Assessment:
 
     def get_max_score(self):
         return self.__max_score
+
+class Quiz(Assessment):
+    def display_info(self):
+        print("=====Quiz Information=====")
+        print(f"Title: {self.get_title()}")
+        print(f"Max score: {self.get_max_score()}")
