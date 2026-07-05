@@ -23,4 +23,11 @@ class Gradebook:
         course = self.courses[course_code]
         student.enroll_course(course_code)
         course.add_student(student_id)
-        
+
+    def add_assessment(self, course_code, assessment):
+        if course_code not in self.courses:
+            print("Course not found.")
+            return
+
+        course = self.courses[course_code]
+        course.add_assessment(assessment)
