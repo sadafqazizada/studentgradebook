@@ -5,3 +5,7 @@ class Course:
         self.__students = []
         self.__assessments = []
 
+    def get_course_code(self):
+        return self.__course_code
+    def get_course_name(self):
+        return self.__course_name
