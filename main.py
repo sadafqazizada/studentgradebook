@@ -77,4 +77,16 @@ def main():
 
             gradebook.enroll_student(student_id, course_code)
 
+#---------------------Add a quiz, exam, or project--------------------
+
+        elif choice == "5":
+
+            course_code = input("Course Code: ")
+
+            assessment_type = input("Assessment Type (quiz/exam/project): ").lower()
+
+            title = input("Assessment Title: ")
+
+            max_score = float(input("Maximum Score: "))
+
         
