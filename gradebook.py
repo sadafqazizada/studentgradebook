@@ -82,3 +82,14 @@ class Gradebook:
                     student.get_name().lower() == keyword.lower()):
                 return student
         return None
+
+    def delete_student(self, student_id):
+        if student_id not in self.students:
+            print("Student not found.")
+            return
+        del self.students[student_id]
+        if student_id in self.grades:
+            del self.grades[student_id]
+        for course in self.courses.values():
+            if student_id in course._Course__students:
+                course._Course__students.remove(student_id)
