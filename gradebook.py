@@ -61,6 +61,17 @@ class Gradebook:
 
         course.add_assessment(assessment)
 
+#-------------------
+    def view_students(self):
+
+        if not self.students:
+            print("No students registered.")
+
+            return
+
+        for student in self.students.values():
+            student.display_info()
+
 #--------------------Record Student Grade--------------------
 
     def record_grade(self, student_id, course_code, assessment_title, score):
@@ -129,6 +140,8 @@ class Gradebook:
 
                 total += assessment.calculate_percentage(score)
 
+                count += 1
+
         if count == 0:
 
             return 0
@@ -139,7 +152,7 @@ class Gradebook:
 
     def get_result(self, average):
 
-        if average >= self.passing_grade:
+        if average >= self.passing_grades:
 
             return "Passed"
 
@@ -182,6 +195,18 @@ class Gradebook:
             if student_id in course._Course__students:
 
                 course._Course__students.remove(student_id)
+
+#--------------------
+    def update_student(self, student_id, email):
+
+        if student_id not in self.students:
+            print("Student not found.")
+
+            return
+
+        self.students[student_id].set_email(email)
+
+        print("Student updated successfully.")
 
 #--------------------Show Student Report-------------------
 
