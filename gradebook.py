@@ -230,3 +230,27 @@ class Gradebook:
                 print(f"Average: {average:.2f}%")
 
                 print(f"Result: {self.get_result(average)}")
+
+#--------------------Calculate Letter Grade (Creative Feature 1)--------------------
+    
+    def get_letter_grade(self, average):
+
+        if average >= 90:
+
+            return "A"
+
+        elif average >= 80:
+
+            return "B"
+
+        elif average >= 70:
+
+            return "C"
+
+        elif average >= 60:
+
+            return "D"
+
+        else:
+
+            return "F"
