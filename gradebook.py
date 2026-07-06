@@ -184,7 +184,7 @@ class Gradebook:
                 course._Course__students.remove(student_id)
 
 #--------------------Show Student Report-------------------
-    
+
     def show_report(self, student_id):
 
         if student_id not in self.students:
