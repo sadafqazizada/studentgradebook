@@ -56,4 +56,15 @@ def main():
 
             gradebook.view_students()
 
+#--------------------Create and add a new course--------------------
+        elif choice == "3":
+
+            course_code = input("Course Code: ")
+
+            course_name = input("Course Name: ")
+
+            course = Course(course_code, course_name)
+
+            gradebook.add_course(course)
+
         
