@@ -75,3 +75,10 @@ class Gradebook:
             return "Passed"
         else:
             return "Failed"
+
+    def search_student(self, keyword):
+        for student in self.students.values():
+            if (student.get_id() == keyword or
+                    student.get_name().lower() == keyword.lower()):
+                return student
+        return None
