@@ -125,3 +125,19 @@ def main():
             student_id = input("Student ID: ")
 
             gradebook.show_report(student_id)
+
+#--------------------Search for a student--------------------
+
+        elif choice == "8":
+
+            keyword = input("Student ID or Name: ")
+
+            student = gradebook.search_student(keyword)
+
+            if student:
+
+                student.display_info()
+
+            else:
+
+                print("Student not found.")
