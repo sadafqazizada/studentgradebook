@@ -67,4 +67,14 @@ def main():
 
             gradebook.add_course(course)
 
+#---------------------Enroll a student in a course--------------------
+
+        elif choice == "4":
+
+            student_id = input("Student ID: ")
+
+            course_code = input("Course Code: ")
+
+            gradebook.enroll_student(student_id, course_code)
+
         
