@@ -51,4 +51,9 @@ def main():
 
             gradebook.add_student(student)
 
-            
+#--------------------Display all registered students--------------------
+        elif choice == "2":
+
+            gradebook.view_students()
+
+        
