@@ -141,3 +141,21 @@ def main():
             else:
 
                 print("Student not found.")
+
+#--------------------Update student information--------------------
+
+        elif choice == "9":
+
+            student_id = input("Student ID: ")
+
+            email = input("New Email: ")
+
+            gradebook.update_student(student_id, email)
+
+#--------------------Remove a student---------------------
+        
+        elif choice == "10":
+
+            student_id = input("Student ID: ")
+
+            gradebook.delete_student(student_id)
