@@ -89,4 +89,26 @@ def main():
 
             max_score = float(input("Maximum Score: "))
 
-        
+#-------------------Create the correct assessment object--------------------
+
+        if assessment_type == "quiz":
+
+            assessment = Quiz(title, max_score)
+
+        elif assessment_type == "exam":
+
+            assessment = Exam(title, max_score)
+
+        elif assessment_type == "project":
+
+            assessment = Project(title, max_score)
+
+        else:
+
+            print("Invalid assessment type.")
+
+            continue
+
+        gradebook.add_assessment(course_code, assessment)
+
+    
