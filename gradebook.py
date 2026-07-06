@@ -232,7 +232,7 @@ class Gradebook:
                 print(f"Result: {self.get_result(average)}")
 
 #--------------------Calculate Letter Grade (Creative Feature 1)--------------------
-    
+
     def get_letter_grade(self, average):
 
         if average >= 90:
