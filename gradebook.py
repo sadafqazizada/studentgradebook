@@ -229,6 +229,8 @@ class Gradebook:
 
                 print(f"Average: {average:.2f}%")
 
+                print(f"Letter Grade: {self.get_letter_grade(average)}")
+
                 print(f"Result: {self.get_result(average)}")
 
 #--------------------Calculate Letter Grade (Creative Feature 1)--------------------
