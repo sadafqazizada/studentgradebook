@@ -153,9 +153,18 @@ def main():
             gradebook.update_student(student_id, email)
 
 #--------------------Remove a student---------------------
-        
+
         elif choice == "10":
 
             student_id = input("Student ID: ")
 
             gradebook.delete_student(student_id)
+
+#-------------------Exit the Program--------------------
+        elif choice == "0":
+
+            print("Goodbye!")
+
+            break
+
+        
