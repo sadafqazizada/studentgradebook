@@ -38,4 +38,17 @@ def main():
 
         choice = input("Choose an option: ")
 
-        
+#--------------------Add a new student--------------------
+
+        if choice == "1":
+            student_id = input("Student ID: ")
+
+            name = input("Name: ")
+
+            email = input("Email: ")
+
+            student = Student(student_id, name, email)
+
+            gradebook.add_student(student)
+
+            
