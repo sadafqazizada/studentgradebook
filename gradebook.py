@@ -254,3 +254,28 @@ class Gradebook:
         else:
 
             return "F"
+
+#--------------------Student Ranking (Creative Feature 2)--------------------
+
+    def student_ranking(self, course_code):
+
+        if course_code not in self.courses:
+            print("Course not found.")
+            return
+
+        ranking = []
+
+        for student_id in self.students:
+
+            average = self.calculate_average(student_id, course_code)
+
+            if average > 0:
+                student = self.students[student_id]
+                ranking.append((student.get_name(), average))
+
+        ranking.sort(key=lambda item: item[1], reverse=True)
+
+        print("===== Student Ranking =====")
+
+        for index, (name, average) in enumerate(ranking, start=1):
+            print(f"{index}. {name} - {average:.2f}%")
