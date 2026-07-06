@@ -77,38 +77,51 @@ def main():
 
             gradebook.enroll_student(student_id, course_code)
 
-#---------------------Add a quiz, exam, or project--------------------
+#---------------------Add a quiz, exam, or project----------------------
 
         elif choice == "5":
 
             course_code = input("Course Code: ")
-
             assessment_type = input("Assessment Type (quiz/exam/project): ").lower()
-
             title = input("Assessment Title: ")
-
             max_score = float(input("Maximum Score: "))
 
-#-------------------Create the correct assessment object--------------------
+ #-------------------Create the correct assessment object--------------------
 
-        if assessment_type == "quiz":
+            if assessment_type == "quiz":
+                assessment = Quiz(title, max_score)
 
-            assessment = Quiz(title, max_score)
+            elif assessment_type == "exam":
+                assessment = Exam(title, max_score)
 
-        elif assessment_type == "exam":
+            elif assessment_type == "project":
+                assessment = Project(title, max_score)
 
-            assessment = Exam(title, max_score)
+            else:
+                print("Invalid assessment type.")
+                continue
 
-        elif assessment_type == "project":
+            gradebook.add_assessment(course_code, assessment)
 
-            assessment = Project(title, max_score)
+ #---------------------Record a student's grade--------------------
 
-        else:
+        elif choice == "6":
 
-            print("Invalid assessment type.")
+            student_id = input("Student ID: ")
+            course_code = input("Course Code: ")
+            assessment_title = input("Assessment Title: ")
+            score = float(input("Score: "))
 
-            continue
+            gradebook.record_grade(
+                student_id,
+                course_code,
+                assessment_title,
+                score
+            )
 
-        gradebook.add_assessment(course_code, assessment)
+#--------------------Show the student's project--------------------
+        elif choice == "7":
 
-    
+            student_id = input("Student ID: ")
+
+            gradebook.show_report(student_id)
