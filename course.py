@@ -60,5 +60,5 @@ class Course:
         print(f"Course Name: {self.__course_name}")
 
         print(f"Students Enrolled: {len(self.__students)}")
-        
+
         print(f"Assessments: {len(self.__assessments)}")
