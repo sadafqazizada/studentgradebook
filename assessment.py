@@ -20,7 +20,7 @@ class Assessment:
 
     def calculate_percentage(self, score):
 
-        return (score / self.__max_score()) * 100
+        return (score / self.__max_score) * 100
 
 #--------------------General Grade Message--------------------
 

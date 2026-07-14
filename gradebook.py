@@ -61,7 +61,8 @@ class Gradebook:
 
         course.add_assessment(assessment)
 
-#-------------------
+#-------------------View Student--------------------
+
     def view_students(self):
 
         if not self.students:
@@ -196,7 +197,8 @@ class Gradebook:
 
                 course._Course__students.remove(student_id)
 
-#--------------------
+#--------------------Update Student--------------------
+
     def update_student(self, student_id, email):
 
         if student_id not in self.students:
